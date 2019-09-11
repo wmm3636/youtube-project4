@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mongo Project By Waleed</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+<!--      <script src="../public/main.js"> </script>-->
+    <link rel="stylesheet" src="youtube.css">
+
+
+</head>
+    <style>
+.hover14 figure {
+	position: relative;
+}
+.hover14 figure::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 30%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+.hover14 figure:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 100%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 100%;
+	}
+}          
+        #new1:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+        
+        
+
+
+
+/* Zoom Out #2 */
+.hover04 figure img {
+	width: 350px;
+	height: auto;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover04 figure:hover img {
+	width: 300px;
+}
+
+
+
+
+
+ 
+</style>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="padding:0px; height:60px">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="http://localhost:4000/">
+        <div class="hover14 column">
+    <figure>  
+    <img src="http://dsim.in/blog/wp-content/uploads/2015/06/youtube-logo.png" alt="logo" style="max-width:100px;padding-top:15px;">
+            </figure>
+      </div>
+        </a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="http://localhost:4000/">Home Page</a>
+    </li>
+  </ul>
+</nav> 
+<div class="jumbotron text-center" style="background-color: orangered; max-height: 20%" id="jumbo" >
+
+  
+    <h1 style="padding-right:80px">    
+        <img id="new1" src="https://popcultureocd.files.wordpress.com/2016/10/social_media_icons_blot_icons_set_512x512_0004_youtube.png" alt="Smiley" height="82" width="82">  YouTube Statistics</h1>
+  <h5>Search For Your Favourite Video</h5> 
+</div>
+<div id="myDiv" style="visibility: visible">
+<div class="container" >
+  <h2>Video Statistics</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Attributes</th>
+        <th style="text-align: center">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        
+      <tr>
+        <td>Video Name</td>
+        <td style="text-align: center"><%= info[0].title %></td>
+      </tr>
+            
+      <tr>
+        <td>Channel Title</td>
+        <td style="text-align: center"><%= info[0].channel_title %></td>
+      </tr>
+    
+
+      <tr>
+       
+        <td>Video ThumbNail</td>          
+        <td style="text-align: center" id="myImg"> 
+            
+            <div class="hover04 column">
+                <div> 
+                    <figure> <img id="new1" src = "<%= info[0].thumbnail_link %>" width="180" height = "180" ></figure>
+                </div>
+            </div>  
+        </td>
+
+      </tr>
+      
+        <tr>
+        <td>Video ID</td>
+        <td style="text-align: center"><%= info[0].video_id %></td>
+      </tr>
+        
+      <tr>
+        <td>Video Name</td>
+        <td style="text-align: center"><%= info[0].title %></td>
+      </tr>
+        
+      <tr>
+        <td>Category ID</td>
+        <td style="text-align: center"><%= info[0].category_id %></td>
+      </tr>
+        
+      <tr>
+        <td>Tags</td>
+        <td style="text-align: center"><%= info[0].tags %></td>
+      </tr>
+        
+      <tr>
+        <td>Views</td>
+        <td style="text-align: center"><%= info[0].views %></td>
+      </tr>        
+
+      <tr>
+        <td>Likes</td>
+        <td style="text-align: center"><%= info[0].likes %></td>
+      </tr>
+        
+      <tr>
+        <td>Dislikes</td>
+        <td style="text-align: center"><%= info[0].dislikes %></td>
+      </tr>
+        
+      <tr>
+        <td>Total Comments</td>
+        <td style="text-align: center"><%= info[0].comment_total %></td>
+      </tr>     
+        
+      <tr>
+        <td>Date Added</td>
+        <td style="text-align: center"><%= info[0].date %></td>
+      </tr>  
+        
+      <tr >
+        <td>Added Comments</td>
+        <td style="text-align: center"><%= info[0].comments %></td>
+      </tr>      
+      
+    </tbody>
+  </table>
+        <form action="/addcomment" method="POST">
+          <div class="form-group">
+            <label for="email">Enter Comments:</label>
+            <input type="text" name="comment" class="form-control" id="Comments">
+            <input type="text"  name="id" value="<%= info[0]._id%>" style="display:none">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>    
+    
+    
+</div>
+</div>
+
+    
+ <div style="position:relative" >
+    
+ <footer class="bg-dark text-white mt-4"  >
+ 
+<div class="container marketing" style="padding-left: 180px">
+    <div class="row">
+      <div class="col-lg-4" style="padding-top:15px">
+        <img class="rounded-circle" src="https://image.flaticon.com/icons/png/512/206/206860.png" alt="" width="102" height="95" style="padding-left: 7px">
+        <h5 style="padding-left: 13px">Waleed Mohammed</h5>
+      </div>
+    </div>
+    </div>    
+  </footer>    
+</div>   
+    
+
+    
+   </body> 
+</html>

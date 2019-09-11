@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mongo Project By Waleed</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <link rel="stylesheet" src="youtube.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+<!--  <script src="../public/main.js"> </script>-->
+    
+ 
+    
+    
+</head>
+           <style>
+.hover14 figure {
+	position: relative;
+}
+.hover14 figure::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 30%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+.hover14 figure:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 100%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 100%;
+	}
+}               
+               
+               
+ #new1:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+</style>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="padding-bottom:0px; height:60px">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="http://localhost:4000/">
+    <div class="hover14 column">
+    <figure> <img id="new2" src="http://dsim.in/blog/wp-content/uploads/2015/06/youtube-logo.png" alt="logo" style="padding-bottom:0px;max-width:100px; max-height: 100%"></figure>
+</div>  
+   
+  </a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav" style="padding-top:0px">
+    <li class="nav-item">
+      <a class="nav-link" style="padding-top:0px" href="http://localhost:4000/">Home Page</a>
+    </li>
+  </ul>
+</nav>   
+
+<div class="jumbotron text-center" style="background-color: orangered; max-height: 350px" >
+    <img id="new1" src= "data:image/png;base64,<%= info.base %>" alt="Smiley" height="122" width="122">    
+    <h1>YouTube Statistics</h1>
+  <p>Search For Your Favourite Video</p> 
+    <div class="input-group">
+     <br/>
+    <br/> 
+    <form class = "form-inline" action="/search" method="POST" style="margin:auto; max-width:100%">    
+  <input type="text" class="form-control" placeholder="Enter a KeyWord to Search by Title" name = "search" aria-describedby="basic-addon2" style="width: 950px">
+        <button type="submit" value = "submit" style="width: 150px; padding:7.5px">Submit </button>
+        </form>
+</div>
+</div>
+  
+<div id="myDiv">
+    
+<div class="container">
+ 
+           
+  <table class="table table-striped">
+    <thead>
+      <tr>
+     
+        <% if (info.flag==1)  {  %>
+          <th id="head" style="text-align:center"> <h4>Click On The Retrieved link's For Video Statistics </h4></th>
+          <% } %>
+        
+      </tr>
+    </thead>
+    <tbody>
+      
+    <% for(j=0;j<info.length;j++) { %>    
+      <tr style = "cursor:pointer;" id="<%= info[j]._id%>" onclick = "desc(this)">
+        <td><%= info[j].title %>> </td>
+      </tr>
+    <% } %>
+    </tbody>
+  </table>
+</div>
+    </div>    
+
+    
+ <div style="position:relative; padding-top:400px">
+    
+ <footer class="bg-dark text-white mt-4" >
+ 
+<div class="container marketing" style="padding-left: 180px; padding-top: 15px">
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="https://image.flaticon.com/icons/png/512/206/206860.png" alt="" width="102" height="95" style="padding-left: 7px">
+        <h5 style="padding-left: 13px"> Waleed Mohammed </h5>
+      </div>
+    </div>
+    </div>    
+  </footer>    
+</div>
+    
+
+    <script>
+      
+    
+   function myFunction() {
+     console.log("hello");
+    document.getElementById("myDiv").style.display = 'block';   
+ }
+   function desc(dom1){
+       //console.log("hehehehehe");
+    //console.log(dom1);
+  window.location.assign("http://localhost:4000/desc.ejs?id="+dom1.id+"");
+    
+}
+
+               
+    </script>   
+    </body>
+</html>
