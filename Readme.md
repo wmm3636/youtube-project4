@@ -27,6 +27,7 @@
 		![alt text](http://img/1.png)
 
 		
+  <img src="./img/1.png" width="350" title="hover text">
 
 # References:
 - https://docs.mongodb.com/
