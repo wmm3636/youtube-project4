@@ -2,9 +2,9 @@
 
 # Project Summary:
 
-	In this project, I built a Web API using 4 components of MEAN Stack technology which is MongoDB, ExpressJS, and NodeJS. 
-	In this, I have used one datasets which Youtube statistics containing around 8000 documents and consist of 11 attributes and has been taken from the Kaggle website. 
-	The application basically allows the user to Search from thousands of youtube videos to check their statistics also the user can add his own comments to any particular video.
+In this project, I built a Web API using 4 components of MEAN Stack technology which is MongoDB, ExpressJS, and NodeJS. 
+In this, I have used one datasets which Youtube statistics containing around 8000 documents and consist of 11 attributes and has been taken from the Kaggle website. 
+The application basically allows the user to Search from thousands of youtube videos to check their statistics also the user can add his own comments to any particular video.
 
 # Requirement to run the project:
 
