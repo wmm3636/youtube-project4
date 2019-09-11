@@ -23,6 +23,10 @@
 # Output Interpretation:
 		On giving input by title to the search bar the number of videos list is retrieved based on the provided input and on clicking on any of the retrieved video its statistics will be displayed. 
 		The user is also allowed to add his/her own comments on any particular video.
+		
+		![alt text](http://img/1.png)
+
+		
 
 # References:
 - https://docs.mongodb.com/
