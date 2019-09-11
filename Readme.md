@@ -15,14 +15,15 @@ The application basically allows the user to Search from thousands of youtube vi
 
 # Instructions:
 
-	1. Open terminal and go to the directory where the YouTube project is saved and run the following commands  node server.js
+- Open terminal and go to the directory where the YouTube project is saved and run the following commands  node server.js
 
-	2. Once the connection is obtained open any browser and type localhost:4000 and press enter. Now, follow the onscreen directions and proceed.
+- Once the connection is obtained open any browser and type localhost:4000 and press enter. Now, follow the onscreen directions and proceed.
 
 			
 # Output Interpretation:
-		On giving input by title to the search bar the number of videos list is retrieved based on the provided input and on clicking on any of the retrieved video its statistics will be displayed. 
-		The user is also allowed to add his/her own comments on any particular video.
+
+On giving input by title to the search bar the number of videos list is retrieved based on the provided input and on clicking on any of the retrieved video its statistics will be displayed. 
+The user is also allowed to add his/her own comments on any particular video.
 		
 
 		
